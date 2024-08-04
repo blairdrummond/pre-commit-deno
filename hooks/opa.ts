@@ -2,7 +2,9 @@ import { copy } from "https://deno.land/std@0.104.0/io/util.ts";
 
 // --allow-run
 const process = Deno.run({
-  cmd: ["opa", "test", "-v", "."]
+  cmd: ["opa", "test", "-v", "."],
+  stdout: "piped",
+  stderr: "piped",
 });
 
 copy(process.stdout, Deno.stdout);
