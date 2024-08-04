@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/hook.sh"
 
-opa test -v
+deno run --allow-read=. --allow-run=opa hooks/opa.ts
